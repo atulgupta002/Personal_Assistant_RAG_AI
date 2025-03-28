@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atul's Assistant</title>
+    <!-- Link to the favicon image -->
+    <link rel="icon" href="static/icon.ico" type="image/x-icon">
+    <!-- Or if you're using a PNG image -->
+    <link rel="icon" href="static/icon.png" type="image/png">
+
+    <!-- Optional: Add different sizes for different devices -->
+    <link rel="icon" href="static/icon.png" sizes="32x32">
+    <link rel="icon" href="static/icon.png" sizes="16x16">
+
+    <!-- For Apple devices -->
+    <link rel="apple-touch-icon" href="static/icon.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="static/icon.ico" alt="Icon" class="header-icon">
+            <div class="logo">Atul's Personal Assistant</div>
+            <p>Any questions?</p>
+        </div>
+
+        <div class="chat-container" id="chatContainer">
+            <!-- Messages will be inserted here -->
+        </div>
+
+        <div class="input-container">
+            <input type="text" class="chat-input" id="userInput" placeholder="Type your message here...">
+        </div>
+
+        <div class="button-container">
+            <button class="btn">Start Chat</button>
+            <a href="https://github.com/atulgupta002/Personal_Assistant_RAG_AI" target="_blank">
+            <button class="btn secondary-btn">View Code</button>
+            </a>
+            <a href="static/architecture.png" target="_blank">
+            <button class="btn secondary-btn">View Diagram</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Built and designed by Atul Gupta | Deployed on AWS</p>
+        <p>Generative AI is experimental and may hallucinate.</p>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

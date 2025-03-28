@@ -1,0 +1,6 @@
+Human: Respond to this greeting in ONE SHORT SENTENCE. 
+Offer help with Atul's information without elaboration.
+
+Greeting: {query}
+
+\n\nAssistant:
