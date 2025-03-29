@@ -7,8 +7,8 @@ from datetime import datetime
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
-BUCKET_NAME = 'personal-assistant-app-bucket'
-s3 = boto3.client('s3',region_name='us-east-1')
+BUCKET_NAME = ''
+s3 = boto3.client('s3',region_name='')
 
 query_prompt = "static/query_prompt.txt"
 greeting_prompt = "static/greeting_prompt.txt"
@@ -64,7 +64,7 @@ def detect_intent(query):
 
 # Function to generate and get ai response using AWS Bedrock. It is then return to Flask application.
 def get_ai_response(user_input, conversation_history):
-    bedrock_client = boto3.client('bedrock-runtime', region_name='us-east-1')
+    bedrock_client = boto3.client('bedrock-runtime', region_name='')
 
     intent = detect_intent(user_input)
 
