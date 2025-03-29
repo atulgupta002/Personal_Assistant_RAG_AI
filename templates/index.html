@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atul's Assistant</title>
-    <!-- Link to the favicon image -->
     <link rel="icon" href="static/icon.ico" type="image/x-icon">
-    <!-- Or if you're using a PNG image -->
+
     <link rel="icon" href="static/icon.png" type="image/png">
 
-    <!-- Optional: Add different sizes for different devices -->
     <link rel="icon" href="static/icon.png" sizes="32x32">
     <link rel="icon" href="static/icon.png" sizes="16x16">
 
-    <!-- For Apple devices -->
     <link rel="apple-touch-icon" href="static/icon.png">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
@@ -22,7 +19,7 @@
         <div class="header">
             <img src="static/icon.ico" alt="Icon" class="header-icon">
             <div class="logo">Atul's Personal Assistant</div>
-            <p>Any questions?</p>
+            <p>Say hello :)</p>
         </div>
 
         <div class="chat-container" id="chatContainer">
@@ -34,12 +31,12 @@
         </div>
 
         <div class="button-container">
-            <button class="btn">Start Chat</button>
+            <button class="btn" id="startButton">Start Chat</button>
             <a href="https://github.com/atulgupta002/Personal_Assistant_RAG_AI" target="_blank">
             <button class="btn secondary-btn">View Code</button>
             </a>
             <a href="static/architecture.png" target="_blank">
-            <button class="btn secondary-btn">View Diagram</button>
+            <button class="btn secondary-btn">How does it work?</button>
             </a>
         </div>
     </div>

@@ -8,14 +8,17 @@ import re
 from keybert import KeyBERT
 from faiss import IndexFlatIP
 import faiss
+import torch
 
 # Defining model parameters
 embeddings_model = "all-MiniLM-L6-v2"
+device = "cuda" if torch.cuda.is_available() else "cpu"
 file_path = "static/Atul_Gupta_Information.docx"
 top_k = 5
-model = SentenceTransformer(embeddings_model)
+model = SentenceTransformer(embeddings_model,device=device)
 kw_model = KeyBERT()
 custom_stopwords = list(ENGLISH_STOP_WORDS) + ['Atul','Gupta','atul','gupta']
+
 
 # Function to create vector embeddings for the source document, augment it with synonyms of keywords
 # to make sure relevant information is retrieved even if the keyword for it does not exist directly in the document.
@@ -76,6 +79,7 @@ def create_source_embeddings():
 
     # These embeddings are stored in a pickle file to reduce processing times.
     # We can do this because our dataset isn't large and doesn't change very often.
+    embeddings = embeddings.cpu() # Moving embeddings to CPU to work with Amazon Linux
     with open('static/document_embeddings.pkl', 'wb') as f:
         pickle.dump((embeddings,augmented_chunks), f)
     
@@ -176,6 +180,7 @@ def build_llm_prompt(query, prompt_file,intent = "context_query", max_length=300
     # Reading stored vector embeddings.
     with open('static/document_embeddings.pkl', 'rb') as f:
         embeddings, augmented_chunks  = pickle.load(f)
+    embeddings = embeddings.cpu()
 
     # Reading stored index from index file.
     index = faiss.read_index(f"static/faiss_index.index")

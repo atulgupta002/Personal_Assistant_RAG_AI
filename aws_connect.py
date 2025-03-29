@@ -34,8 +34,21 @@ def log_query_response(query, response):
 def detect_intent(query):
     query = query.strip().lower()
     
-    # Check for standalone greetings
-    if query in {'hi', 'hello', 'hey', 'hi!', 'hello!'}:
+    if query in {
+        # Greetings
+        'hi', 'hello', 'hey', 'hi!', 'hello!', 'hey!', 
+        'good morning', 'good afternoon', 'good evening', 
+        'howdy', 'greetings', 'whats up', 'sup', 'yo', 
+        'bonjour', 'hola', 'ciao', 'salut', 'aloha', 
+        'hows it going', 'whats going on', 'hey there', 
+        'howdy!', 'yo!',
+
+        # Farewells
+        'bye', 'goodbye', 'see you', 'see ya', 'take care', 
+        'later', 'see you later', 'bye bye', 'farewell', 
+        'catch you later', 'peace', 'adios', 'ciao!', 
+        'sayonara', 'so long', 'see you soon'
+    }:
         return "greeting"
         
     # Check for greeting patterns

@@ -6,7 +6,7 @@ from flask import Flask, render_template, request, jsonify, session
 from aws_connect import get_ai_response
 
 application = Flask(__name__)
-application.secret_key = 'your_secret_key_here'  # Required for session handling
+application.secret_key = 'pzRd.Tcqa8Udv2h'
 
 # Function to get response from AI with optional conversation history.
 # However we are operating with low contect windows so conversation history is not implemented yet.

@@ -1,6 +1,7 @@
 const chatContainer = document.getElementById('chatContainer');
 const userInput = document.getElementById('userInput');
 const loading = document.getElementById('loading');
+const startButton = document.getElementById('startButton');
 
 function addMessage(sender, text) {
     const messageDiv = document.createElement('div');
@@ -44,6 +45,13 @@ async function sendMessage() {
 userInput.addEventListener('keypress', (e) => {
     // console.log("Event listener triggered");
     if (e.key === 'Enter' && !e.shiftKey) {
+        sendMessage();
+    }
+});
+
+// Handle Start Chat button click (only if input is not empty)
+startButton.addEventListener('click', () => {
+    if (userInput.value.trim() !== '') {
         sendMessage();
     }
 });
