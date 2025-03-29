@@ -13,7 +13,7 @@ import torch
 # Defining model parameters
 embeddings_model = "all-MiniLM-L6-v2"
 device = "cuda" if torch.cuda.is_available() else "cpu"
-file_path = "static/Atul_Gupta_Information.docx"
+file_path = ""
 top_k = 5
 model = SentenceTransformer(embeddings_model,device=device)
 kw_model = KeyBERT()
