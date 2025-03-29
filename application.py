@@ -6,7 +6,7 @@ from flask import Flask, render_template, request, jsonify, session
 from aws_connect import get_ai_response
 
 application = Flask(__name__)
-application.secret_key = 'pzRd.Tcqa8Udv2h'
+application.secret_key = ''
 
 # Function to get response from AI with optional conversation history.
 # However we are operating with low contect windows so conversation history is not implemented yet.
@@ -42,4 +42,4 @@ def chat():
     })
 
 if __name__ == '__main__':
-    application.run(host="0.0.0.0",port=8000)
+    application.run(host="",port=)
