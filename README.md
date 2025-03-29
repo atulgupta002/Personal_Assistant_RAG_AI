@@ -1,3 +1,5 @@
+## Talk to my Assistant: https://tinyurl.com/mr4xrtyz
+
 # RAG AI Personal Assistant
 
 RAG AI Personal Assistant is a Retrieval-Augmented Generation (RAG) application designed to help hiring teams and recruiters gain deep insights about a job candidate.
