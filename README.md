@@ -1,5 +1,7 @@
 ## Talk to my Assistant: https://tinyurl.com/mr4xrtyz
 
+<img width="745" alt="image" src="https://github.com/user-attachments/assets/2cfa841c-8f40-4db7-b7a7-c650da9aa0f4" />
+
 # RAG AI Personal Assistant
 
 RAG AI Personal Assistant is a Retrieval-Augmented Generation (RAG) application designed to help hiring teams and recruiters gain deep insights about a job candidate.
@@ -29,3 +31,6 @@ The project architecture is centered on two core components:
    - Feeds the retrieved information into an LLM to generate responses.
 
 The entire application is deployed on AWS Elastic Beanstalk as a Flask application, served by Nginx and gunicorn.
+
+![image](https://github.com/user-attachments/assets/9b9f60d7-719b-4e5c-9d08-b0d4f2b3d4a7)
+
