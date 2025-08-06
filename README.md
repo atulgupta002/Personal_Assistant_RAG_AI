@@ -1,4 +1,4 @@
-## Talk to my Assistant: https://tinyurl.com/mr4xrtyz
+## <!-- Talk to my Assistant (not live anymore): https://tinyurl.com/mr4xrty -->
 
 <img width="745" alt="image" src="https://github.com/user-attachments/assets/2cfa841c-8f40-4db7-b7a7-c650da9aa0f4" />
 
